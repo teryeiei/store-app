@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild} from '@angular/core';
-import { Ingerdient } from '../../shared/ingredient.model';
+import { Ingredient } from '../../shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list.service';
 
 @Component({
@@ -19,7 +19,7 @@ export class ShoppingEditComponent implements OnInit {
   onAddItem() {
     const ingName = this.nameInputRef.nativeElement.value;
     const ingAmount = this.amountInputRef.nativeElement.value;
-    const newIngredient = new Ingerdient(ingName, ingAmount);
+    const newIngredient = new Ingredient(ingName, ingAmount);
     this.slService.addIngredient(newIngredient);
   }
 }
