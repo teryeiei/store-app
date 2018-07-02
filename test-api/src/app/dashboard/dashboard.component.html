@@ -1,0 +1,57 @@
+<div class="page-content-wrapper">
+  <!-- BEGIN CONTENT BODY -->
+  <div class="page-content">
+    <!-- BEGIN PAGE BAR -->
+    <div class="page-bar">
+      <ul class="page-breadcrumb">
+        <li>
+          <a href="javascript:void();">Home</a>
+          <i class="fa fa-circle"></i>
+        </li>
+        <li>
+          <span>Dashboard</span>
+        </li>
+      </ul>
+      <div class="page-toolbar">
+        <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
+          <i class="icon-calendar"></i>&nbsp;
+          <span class="thin uppercase hidden-xs"></span>&nbsp;
+          <i class="fa fa-angle-down"></i>
+        </div>
+      </div>
+    </div>
+    <!-- END PAGE BAR -->
+    <!-- BEGIN PAGE TITLE-->
+    <h1 class="page-title"> Admin Dashboard
+      <small>statistics, charts, recent events and reports</small>
+    </h1>
+    <!-- END PAGE TITLE-->
+    <!-- END PAGE HEADER-->
+    <!-- BEGIN DASHBOARD STATS 1-->
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" *ngFor="let item of resultData">
+        <a class="dashboard-stat dashboard-stat-v2 {{item.color}}">
+
+          <div class="details" style="width: calc(100% - 50px);">
+              <div class="desc" style="text-align: left;">{{item.days}} Days</div>
+          </div>
+          
+          
+          <div class="visual">
+            <i class="fa fa-comments"></i>
+          </div>
+
+          <div class="details" style="width: calc(100% - 50px);">
+              <div class="number">{{item.custgroupName}}</div>
+              <div class="desc">{{item.team}}</div>
+              <div class="desc" style="text-align: left;">{{ item.comment }}</div>
+          </div>
+          
+
+        </a>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <!-- END CONTENT BODY -->
+</div>
